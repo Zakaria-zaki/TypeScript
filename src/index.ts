@@ -60,3 +60,15 @@ const newStack = new Stack<number>();
 newStack.push(1);
 newStack.display();
 
+interface Name {
+    name: string
+}
+
+function displayName<T extends Name>(object: T) {
+    console.log(object.name)
+}
+
+function displayProps<T, U extends keyof T>(object: T, props: U) {
+    console.log(object[props])
+}
+
