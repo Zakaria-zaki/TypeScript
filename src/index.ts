@@ -98,3 +98,12 @@ const user2: MyPartial<Person> = {
 // function func<T extends Lenghty>(x: T) {
 //     return x.lenght;
 // } 
+
+
+declare function f<T>(x: T): T extends string ? string: boolean;
+
+type MyType = Exclude<'a' | 'b', 'a'>;
+
+type MyExcludeType<T, U> = T extends U ? never: T;
+
+type MyExtracttype<T, U> = T extends U ? T: never;
