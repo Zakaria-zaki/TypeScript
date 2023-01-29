@@ -72,3 +72,21 @@ function displayProps<T, U extends keyof T>(object: T, props: U) {
     console.log(object[props])
 }
 
+
+interface Person {
+    username: string;
+    age: number;
+}
+
+type partialType = { [P in keyof Person]?: Person[P] };
+
+type MyPartial<T> = { [P in keyof T]?: T[P] };
+
+
+const user: partialType = {
+    username: 'zakaria'
+}
+
+const user2: MyPartial<Person> = {
+    username: 'abdou'
+}
