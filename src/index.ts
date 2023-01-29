@@ -107,3 +107,6 @@ type MyType = Exclude<'a' | 'b', 'a'>;
 type MyExcludeType<T, U> = T extends U ? never: T;
 
 type MyExtracttype<T, U> = T extends U ? T: never;
+
+
+// ReturnType<test> he will return the type of test 
