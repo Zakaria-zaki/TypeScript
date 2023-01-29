@@ -90,3 +90,11 @@ const user: partialType = {
 const user2: MyPartial<Person> = {
     username: 'abdou'
 }
+
+// interface Lenghty {
+//     lenght: number
+// }
+
+// function func<T extends Lenghty>(x: T) {
+//     return x.lenght;
+// } 
