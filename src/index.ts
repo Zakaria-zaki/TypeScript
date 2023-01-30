@@ -110,3 +110,25 @@ type MyExtracttype<T, U> = T extends U ? T: never;
 
 
 // ReturnType<test> he will return the type of test 
+function ComponentFactory({template, selector}: {template: string, selector: string}) {
+    return ((target) => {
+        const elem = document.querySelector(selector);
+        if(elem) elem.innerHTML = template;
+    })
+}
+
+
+@ComponentFactory({
+    template: '<h1>Hello Component</h1>',
+    selector: 'app'
+})
+class Car {
+    public speed: number;
+
+    constructor(speed: number) {
+        this.speed = speed;
+    }
+}
+
+const audi = new Car(300);
+const renault = new Car(120);

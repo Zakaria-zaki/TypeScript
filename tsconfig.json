@@ -4,6 +4,8 @@
       "module": "ESNext",
       "target": "ES6",
       "baseUrl": ".",
+      "allowJs": true,
+      "experimentalDecorators": true,
       "paths": {
         "jquery": ["node_modules/jquery/dist/jquery"]
       }
